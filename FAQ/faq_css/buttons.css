@@ -38,7 +38,7 @@ button {
     bottom: 0;
     left: 0;
     z-index: -1;
-    background: #000000;
+    background: var(--lightGray);
     transition: all 0.3s ease;
 }
 .btn-13:hover {
@@ -67,7 +67,7 @@ button {
     top: 0;
     left: 0;
     z-index: -1;
-    background: #000000;
+    background: var(--lightGray);
     transition: all 0.3s ease;
 }
 .btn-14:hover {

@@ -21,7 +21,7 @@
 	<section>
 		
 	<div id="faqContainer">
-		<div id="pageTitle"><h1>FAQ 게시판</h1></div>
+		<div id="pageTitle">FAQ 게시판</div>
 		<!-- 관리자에게만 내용추가버튼 보이기 -->
 		<%-- <c:if test="${member.vo.type eq 'M'}"></c:if> --%>
 		
@@ -32,7 +32,7 @@
 		    <article class="btns__dom">
 		        <button class="custom-btn btn-14 btn_up"  style="width:100px height:35px font-size:25px;"><span>Up↑</span></button>
 		        <button class="custom-btn btn-13 btn_down" style="width:100px height:35px font-size:25px;"><span>Down↓</span></button>
-		        <c:if test="${session ne null}">
+		        <c:if test="${session.type eq 'M' }">
 			        <div class="register">
 						<a href="/faq/register"><span class="material-symbols-outlined">edit_square</span>&nbsp;&nbsp;FAQ추가</a>
 					</div>
@@ -50,7 +50,7 @@
 				        	<br><hr>관리자 답변 ☞ ${brd.content}
 				        </div>
 				        <!-- 관리자에게만 관리버튼 보이기 -->	
-			        		<c:if test="${session ne null}">
+			        		<c:if test="${session.type eq 'M' }">
 					        	<div class="txt2"><a href="/faq/detail/${brd.no }"><span class="material-symbols-outlined" style="font-size:14px;">settings</span>관리</a></div>
 					        </c:if>
 			        </li>

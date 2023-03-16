@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
-#faqContainer .pageTitle h1{
+#faqContainer .pageTitle{
 	margin-top: 20px;
 	margin-bottom:20px;
-  	font-size: 45px;
+  	font-size: 38px;
 	text-align: center;
 	
 }
@@ -54,7 +54,6 @@
         background: var(--lightGray);
         font-weight:bold;
         color: var(--yellow);
-        text-shadow: -2px 0 #000, 0 2px #000, 2px 0 #000, 0 -2px #000;
         box-shadow:inset .5rem .5rem 1rem var(--Gray);
     }
     

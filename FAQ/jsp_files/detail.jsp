@@ -18,28 +18,17 @@
 		<div id="pageTitle"><h1>FAQ 관리 페이지</h1></div>
 		
 		<div id="detailContainer">
-			<div id="table">
-				<table style="border: 1px solid #FAE100;">
-				<thead>
-					<tr>
-					  <th>No.${FaqVO.no }</th>
-					  <th>${FaqVO.title }</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>					  
-					  <td colspan="2">${FaqVO.content } </td>
-					</tr>
-				</tbody>
-				</table>
-			</div>
-			<hr>
-			<div id="btn-zone">
-				<a href="/faq/update/${FaqVO.no }"><button type="button">수정</button></a>
-				&nbsp;&nbsp;<a href="/faq/delete/${FaqVO.no }"><button type="button" onclick="delCheck()">삭제</button></a>
-				&nbsp;&nbsp;<a href="/faq/list"><button type="button" >목록</button></a>
-			</div>
-		
+			<form action="/faq/detail" method="post">				
+				<input type="hidden" name="no" value="${FaqVO.no}">
+				<input type="text" class="title" id="title" name="title"  value="${FaqVO.title}" readonly><br>
+		    	<textarea class="content" id="content" name="content" rows="5" cols="30" readonly>${FaqVO.content}</textarea><br>
+				<hr>
+				<div id="btnGroup">
+					<a href="/faq/update/${FaqVO.no }"><button type="button">수정</button></a>
+					&nbsp;&nbsp;<a href="/faq/delete/${FaqVO.no }"><button type="button" onclick="delCheck()">삭제</button></a>
+					&nbsp;&nbsp;<a href="/faq/list"><button type="button" >목록</button></a>
+				</div>
+			</form>		
 		</div>
 	</section>
 	<script type="text/javascript" src="/resources/javascript/Faq.js"></script>

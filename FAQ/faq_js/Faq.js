@@ -111,10 +111,3 @@ function delCheck(){
         return false;
 	}    
 }   
-
-//FAQ 아코디언 효과 JS 코드
-// $(".que").click(function() {
-//     $(this).next(".anw").stop().slideToggle(300);
-//    $(this).toggleClass('on').siblings().removeClass('on');
-//    $(this).next(".anw").siblings(".anw").slideUp(300); // 1개씩 펼치기
-//  });
